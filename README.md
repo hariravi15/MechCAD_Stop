@@ -1,7 +1,7 @@
 # MechCAD Stop ⚙️
 
 **MechCAD Stop** is a one-stop, web-based **parametric CAD generator** that allows users to quickly create standard mechanical components.  
-Built with **Streamlit** and powered by **CadQuery**, this tool streamlines the generation of **gears**, **fasteners**, and **bearings**, offering ready-to-use **STEP files** for your CAD projects.
+Built with [Streamlit](https://streamlit.io/) and powered by [CadQuery](https://github.com/CadQuery/cadquery?tab=readme-ov-file), this tool streamlines the generation of **gears**, **fasteners**, and **bearings**, offering ready-to-use **STEP files** for your CAD projects.
 
 With a library of hundreds of standard **bearings**, **fasteners**, and fully **parametric gears**, MechCAD Stop can generate over **1000+ unique component combinations**, tailored to match your exact design requirements.
 
