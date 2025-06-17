@@ -1,5 +1,5 @@
 streamlit
-cadquery
+cadquery==2.4.0
 numpy
 git+https://github.com/meadiode/cq_gears.git@main
 git+https://github.com/gumyr/cq_warehouse.git
