@@ -9,6 +9,15 @@ With a library of hundreds of standard **bearings**, **fasteners**, and fully **
 
 ---
 
+
+## Live Demo
+
+[https://mechcadstop.streamlit.app/](https://mechcadstop.streamlit.app/)
+
+> **Note:** This app is hosted on Streamlit Community Cloud, which may go inactive after 12 hours of no use.  
+> If the link appears invalid and you prefer not to clone and run it locally, feel free to drop me a request. I’ll reactivate it for you.
+
+---
 ## Features
 
 Quickly generate 3D models for a wide variety of standard parts with just a few clicks.
@@ -45,7 +54,7 @@ Produce industry-standard bearings based on SKT specifications.
 
 ---
 
-## 🛠️ How to Use
+## How to Use
 
 1. **Select a Component**  
    Choose between **"Bearing"**, **"Fastener"**, or **"Gear"** from the main dropdown menu.
@@ -61,7 +70,7 @@ Produce industry-standard bearings based on SKT specifications.
 
 ---
 
-## 📦 Acknowledgements
+## Acknowledgements
 
 This application is built on the shoulders of giants. Special thanks to the creators of these powerful open-source libraries:
 
@@ -70,19 +79,10 @@ This application is built on the shoulders of giants. Special thanks to the crea
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **Apache License 2.0**.  
 See the [LICENSE](./LICENSE) file for details.
-
----
-
-## 🌐 Live Demo
-
-[https://mechcadstop.streamlit.app/](https://mechcadstop.streamlit.app/)
-
-> **Note:** This app is hosted on Streamlit Community Cloud, which may go inactive after 12 hours of no use.  
-> If the link appears invalid and you prefer not to clone and run it locally, feel free to drop me a request — I’ll reactivate it for you.
 
 
 ---
