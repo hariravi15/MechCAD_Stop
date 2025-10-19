@@ -23,8 +23,7 @@ st.markdown("""<style>[data-testid="stDecoration"] {background-image: linear-gra
 st.markdown("<h1 style='text-align: center; color: gray;'><i>MechCAD Stop</h1>", unsafe_allow_html=True)
 st.divider()
 
-# --- State Management ---
-# Initialize session state to hold the generated file data.
+
 if 'generated_file' not in st.session_state:
     st.session_state.generated_file = None
 def clear_download_state():
@@ -64,7 +63,6 @@ if option == "Bearing":
     with btn_cols[0]:
         if st.button(f"Generate Bearing", disabled=not bearing_size):
             try:
-                # The 'bearing_type' is hardcoded to "SKT"
                 instance = BEARING_CLASSES[class_name](size=bearing_size, bearing_type="SKT")
                 temp_dir = tempfile.gettempdir()
                 file_name = f"{class_name}_{bearing_size}.step"
@@ -98,7 +96,7 @@ if option == "Gear":
     gear_type = st.selectbox("Select type of gear",("Spur Gear", "Bevel Gear", "Crossed Helical Gear", "Rack Gear", "Ring Gear", "Worm Gear"),index=None,placeholder="Select a gear type...",on_change=clear_download_state)
     st.header("  ", divider="gray")
 
-    # --- Spur Gear Section ---
+
     if gear_type == "Spur Gear":
         st.subheader("Spur Gear Specifications")
         cols = st.columns(4)
@@ -145,7 +143,7 @@ if option == "Gear":
             else:
                 st.button("Download STEP File", disabled=True)
 
-    # --- Bevel Gear Section ---
+
     elif gear_type == "Bevel Gear":
         st.subheader("Bevel Gear Specifications")
         cols = st.columns(5)
@@ -202,7 +200,7 @@ if option == "Gear":
             else:
                 st.button("Download STEP File", disabled=True)
 
-    # --- Crossed Helical Gear Section ---
+
     elif gear_type == "Crossed Helical Gear":
         st.subheader("Crossed Helical Gear Specifications")
         cols = st.columns(5)
@@ -258,7 +256,7 @@ if option == "Gear":
             else:
                 st.button("Download STEP File", disabled=True)
 
-    # --- Ring Gear Section ---
+
     elif gear_type == "Ring Gear":
         st.subheader("Ring Gear Specifications")
         cols = st.columns(4)
@@ -305,7 +303,7 @@ if option == "Gear":
             else:
                 st.button("Download STEP File", disabled=True)
 
-    # --- Rack Gear Section ---
+
     elif gear_type == "Rack Gear":
         st.subheader("Rack Gear Specifications")
         cols = st.columns(4)
@@ -351,7 +349,7 @@ if option == "Gear":
             else:
                 st.button("Download STEP File", disabled=True)
 
-    # --- Worm Gear Section ---
+
     elif gear_type == "Worm Gear":
         st.subheader("Worm Gear Specifications")
         cols = st.columns(5)
@@ -411,7 +409,7 @@ if option == "Fastener":
     )
     st.header("  ", divider="gray")
 
-    # --- Nut Section ---
+
     if fastener_category == "Nut":
         st.subheader("Nut Specifications")
         NUT_CLASSES = {"Hex Nut": HexNut, "Domed Cap Nut": DomedCapNut, "Square Nut": SquareNut, "Heat Set Nut": HeatSetNut}
@@ -471,7 +469,7 @@ if option == "Fastener":
             else:
                 st.button("Download STEP File", disabled=True)
 
-    # --- Screw Section ---
+
     elif fastener_category == "Screw":
         st.subheader("Screw Specifications")
         SCREW_CLASSES = {"Socket Head Cap Screw": SocketHeadCapScrew, "Counter Sunk Screw": CounterSunkScrew,
@@ -534,7 +532,7 @@ if option == "Fastener":
             else:
                 st.button("Download STEP File", disabled=True)
 
-    # --- Washer Section ---
+
     elif fastener_category == "Washer":
         st.subheader("Washer Specifications")
         WASHER_CLASSES = {"Plain Washer": PlainWasher, "Chamfered Washer": ChamferedWasher}
@@ -566,7 +564,7 @@ if option == "Fastener":
         with btn_cols[0]:
             if st.button(f"Generate Washer", disabled=not washer_size):
                 try:
-                    # Note: Washers don't have threads, so the 'simple' parameter is not needed
+
                     instance = WASHER_CLASSES[class_name](size=washer_size, fastener_type=washer_type)
                     temp_dir = tempfile.gettempdir()
                     file_name = f"{class_name}_{washer_size.replace('/', '_')}.step"
